@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<!--
+-->
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+<title>ChaseMaster</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" href="index.css" type="text/css" media="all">
+<link rel="stylesheet" href="extra.css" type="text/css" media="all">
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Top Background Image Wrapper -->
+<div class="bgded overlay" style="background-image:url('data:image/jpeg;base64,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');"> 
+  <!-- ################################################################################################ -->
+  <header id="header" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div id="logo" class="one_quarter first">
+      <h1><a href="index.html">Chase<span id="master">Master</span></a></h1>
+      <p>We Help You Chase Your Career With A Prime Experience.</p>
+    </div>
+    <div class="three_quarter">
+      <ul class="nospace clear">
+        <li class="one_third first">
+          <div class="block clear"><a href="#"><i class="fas fa-phone"></i></a> <span><strong>Give us a call:</strong> +00 (123) 456 7890</span></div>
+        </li>
+        <li class="one_third">
+          <div class="block clear"><a href="#"><i class="fas fa-envelope"></i></a> <span><strong>Send us a mail:</strong> support@domain.com</span></div>
+        </li>
+        <li class="one_third">
+          <div class="block clear"><a href="#"><i class="fas fa-clock"></i></a> <span><strong> Mon. - Sat.:</strong> 08.00am - 18.00pm</span></div>
+        </li>
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+  </header>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <section id="navwrapper" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <nav id="mainav">
+      <ul class="clear">
+        <li class="active"><a href="../index.html">Home</a></li>
+        <li><a class="drop" href="#">Courses</a>
+          <ul>
+            <li><a href="./pages/japanese.html">Japanese</a></li>
+            <li><a href="./pages/spanish.html">Spanish</a></li>
+            <li><a href="./pages/german.html">German</a></li>
+            <li><a href="./pages/french.html">French</a></li>
+            <li><a href="./pages/english.html">English</a></li>
+            <li><a href="./pages/web.html">Web Development</a></li>
+            <li><a href="./pages/excel.html">MS Excel</a></li>
+          </ul>
+        </li>
+            <li><a href="./pages/about.html">About us</a></li>
+            
+        </li>
+    </nav>
+    <!-- ################################################################################################ -->
+    <div id="searchform">
+      <div>
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Quick Search:</legend>
+            <input type="text" placeholder="Enter search term&hellip;">
+            <button type="submit"><i class="fas fa-search"></i></button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <!-- ################################################################################################ -->
+  </section>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div id="pageintro" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <article>
+      <h3 class="heading"></h3>
+      <p>Affordable Courses Starting at just Rs 799/- per month For Mastering Any Skill To Chase Your Dream.
+      </p>
+      <footer><a class="btn" href="#">Explore</a></footer>
+    </article>
+    <!-- ################################################################################################ -->
+  </div>
+  <!-- ################################################################################################ -->
+</div>
+<!-- End Top Background Image Wrapper -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <div class="container">
+												
+
+
+      <div class="row">
+  
+          <div class="col-md-9">
+  
+              
+              <h1 class="stm_lms_course__title">We Help You Chase Your Career With A Prime Experience.</h1>
+  
+              
+  
+  <div class="single_product_after_title">
+      <div class="clearfix">
+  
+          <div class="pull-left meta_pull">
+
+  
+          </div>
+  
+  
+          <div class="pull-right xs-comments-left">
+              <div class="stm_lms_course__panel_rate">
+              <div class="average-rating-stars">
+          <div class="average-rating-stars__top">
+              <div class="star-rating" title="Rated 4.4 out of 5">
+              <span style="width:88%">
+                  <strong class="rating">4.4</strong>
+          out of 5            </span>
+              </div>
+              <div class="average-rating-stars__av heading_font">4.4</div>
+          </div>
+  
+          <div class="average-rating-stars__reviews">
+        7 reviews        </div>
+  
+      </div>
+  
+              </div>
+          </div>
+  
+  
+      </div>
+  
+  </div>
+  
+              
+  
+  
+      <ul class="nav nav-tabs" role="tablist">
+  
+                      <li role="presentation" class="active">
+                  <a href="#description" data-toggle="tab" aria-expanded="true">
+                      Description                </a>
+              </li>
+                      <li role="presentation" class="">
+                  <a href="#curriculum" data-toggle="tab" aria-expanded="false">
+                      Curriculum                </a>
+              </li>
+                      <li role="presentation" class="">
+                  <a href="#courses" data-toggle="tab" aria-expanded="false">
+                      Courses                </a>
+              </li>
+          
+      </ul>
+  
+  
+  
+  <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="description">
+              <div class="stm_lms_course__image">
+      <img width="870" height="440" src="https://stylemixthemes.com/masterstudy/buddypress-demo/wp-content/uploads/sites/17/2018/08/photo-1491897554428-130a60dd4757-870x440.jpeg" class="attachment-img-870-440 size-img-870-440 wp-post-image" alt="" loading="lazy"></div>
+  
+  
+  <div class="stm_lms_course__content">
+      
+  <div class="vc_row wpb_row vc_row-fluid">
+          <div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+    <div class="wpb_text_column wpb_content_element ">
+      <div class="wpb_wrapper">
+  <h3>Main Features</h3>
+  
+      </div>
+    </div>
+  <div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+    <div class="wpb_text_column wpb_content_element  vc_custom_1533706322004">
+      <div class="wpb_wrapper">
+        <ul>
+  <li>
+    <h5>100% online</h5>
+    <p>Live video Lectures with the best visualization and animation. Chat with Educator, and get your doubt cleared while the class is going on</p>
+  </li>
+  <li>
+    <h5>Premium Courses at affordable prices starting from Rs799/- only.</h5>
+    <p>
+      If you are paying out of pocket then you must need to consider if it is affordable and we are offering our premium courses starting at just Rs799/month Only. 
+     </p>
+  </li>
+  <li>
+    <h5>Multi-Layered Doubt Solving</h5>
+    <p><ul>
+      <li>Layer 1: Solutions of weekly assignments and Exercise sheets for better understanding.
+      </li>
+      <li>Layer 2: Dedicated Doubt Tool. Students can share their doubts via text or image and get a solution.
+      </li>
+      <li>Layer 3: Live Doubt solving classes with ChaseMaster faculties.</li>
+      <li>Layer 4: Personalised Connect with ChaseMaster faculties.</li>
+    </ul></p>
+  </li>
+  <li>
+    <h5>1:1 Mentorship</h5>
+    <p>Get mentorship under the guidance of Your Mentors for consistent motivation, academic support, and for regularly tracking your work progress</p>
+  </li>
+  <li>
+    <h5>Completion Certificate</h5>
+    <p>Get your lifetime value Certificate of completion just after completing the courses. You will be able to present it in any further interviews and get benefitted.
+    </p>
+  </li>
+  </ul>
+  
+      </div>
+    </div>
+  </div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+    <div class="wpb_text_column wpb_content_element  vc_custom_1533706426175">
+      <div class="wpb_wrapper">
+        <ul>
+          <li>
+            <h5>Accessibility</h5>
+            <p><ul>
+              <li>
+                Lifetime access to the course after just one buy.
+              </li>
+              <li>Access on mobile phone, TV, and laptop.</li>
+              <li>Accessible from any corner of the world, anytime, anywhere.
+              </li>
+            </ul></p>
+          </li>
+          <li>
+            <h5>Access to some of the Best faculty
+            </h5>
+            <p>WE as a team of experienced tutors help you enhance your skills far better than your competitors and teaching you how to outrank them. 
+            </p>
+          </li>
+          <li>
+            <h5>Diverse Range Of Subjects and Topic to learn</h5>
+            <p>
+              ChaseMaster Offers you to master your skill in multiple different courses and languages
+        Here are some of the courses that we offer to chase your dream. They are:
+        <ul>
+          <li>Language Courses</li>
+          <li>Japanese</li>
+          <li>German</li>
+          <li>Spanish</li>
+          <li>English</li>
+          <li>Web development</li>
+          <li>Ms Excel</li>
+        </ul>
+        
+            </p>
+          </li>
+  </ul>
+  
+      </div>
+    </div>
+  </div></div></div></div>
+
+  </div></div></div></div>
+  
+  </div>        </div>
+              <div role="tabpanel" class="tab-pane active" id="curriculum">
+              
+  
+      <div class="stm-curriculum">
+  
+      
+                        <div class="stm-curriculum-section">
+                      <h3>Section 1: Introduction to Unreal engine 4</h3>
+                  </div>
+          
+        
+        
+              <div class="stm-curriculum-item ">
+  
+                  <div class="stm-curriculum-item__num">
+            1                </div>
+  
+                  <div class="stm-curriculum-item__icon" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Video">
+            <i class="stmlms-slides"></i>
+                  </div>
+  
+                  <div class="stm-curriculum-item__title">
+                      <div class="heading_font">
+                          Realistic Graphic on UE4                                            </div>
+                  </div>
+  
+                  <div class="stm-curriculum-item__preview">
+                                    <a href="#">
+                Preview                        </a>
+                            </div>
+  
+                  <div class="stm-curriculum-item__meta">
+                            </div>
+  
+                  
+              </div>
+  
+            
+        
+        
+              <div class="stm-curriculum-item has-excerpt">
+  
+                  <div class="stm-curriculum-item__num">
+            2                </div>
+  
+                  <div class="stm-curriculum-item__icon" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Slides">
+            <i class="stmlms-slides-css"></i>
+                  </div>
+  
+                  <div class="stm-curriculum-item__title">
+                      <div class="heading_font">
+                          Nvidia New Technologies Slides                                                    <span class="stm-curriculum-item__toggle"></span>
+                                              </div>
+                  </div>
+  
+                  <div class="stm-curriculum-item__preview">
+                            </div>
+  
+                  <div class="stm-curriculum-item__meta">
+                                    <i class="far fa-clock"></i>15 minutes                                    </div>
+  
+                                      <div class="stm-curriculum-item__excerpt">
+                          <p>Welcome to your first slider tutorial. This slides will start with a simple introduction. Then, You will open up google cause I"ll show you where you can download the blender software and which version of it will we be using in the entire course period.</p><p><strong>Note</strong>: The download link is available with the lecture, plus the .pdf file is also included for you to download if you still need help downloading the software.&nbsp;</p>                    </div>
+                  
+              </div>
+  
+            
+        
+        
+              <div class="stm-curriculum-item ">
+  
+                  <div class="stm-curriculum-item__num">
+            3                </div>
+  
+                  <div class="stm-curriculum-item__icon" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Quiz">
+            <i class="stmlms-quiz"></i>
+                  </div>
+  
+                  <div class="stm-curriculum-item__title">
+                      <div class="heading_font">
+                          Quiz: Mobile / Native Apps                                            </div>
+                  </div>
+  
+                  <div class="stm-curriculum-item__preview">
+                            </div>
+  
+                  <div class="stm-curriculum-item__meta">
+                                    4 questions                                    </div>
+  
+                  
+              </div>
+  
+            
+                        <div class="stm-curriculum-section">
+                      <h3>Section 2: Middle Engine checking </h3>
+                  </div>
+          
+        
+        
+              <div class="stm-curriculum-item ">
+  
+                  <div class="stm-curriculum-item__num">
+            1                </div>
+  
+                  <div class="stm-curriculum-item__icon" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Text Lesson">
+            <i class="stmlms-text"></i>
+                  </div>
+  
+                  <div class="stm-curriculum-item__title">
+                      <div class="heading_font">
+                          Engine Target Audience                                            </div>
+                  </div>
+  
+                  <div class="stm-curriculum-item__preview">
+                            </div>
+  
+                  <div class="stm-curriculum-item__meta">
+                            </div>
+  
+                  
+              </div>
+  
+            
+        
+        
+              <div class="stm-curriculum-item has-excerpt">
+  
+                  <div class="stm-curriculum-item__num">
+            2                </div>
+  
+                  <div class="stm-curriculum-item__icon" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Slides">
+            <i class="stmlms-slides-css"></i>
+                  </div>
+  
+                  <div class="stm-curriculum-item__title">
+                      <div class="heading_font">
+                          Volta GPU for optimization.                                                    <span class="stm-curriculum-item__toggle"></span>
+                                              </div>
+                  </div>
+  
+  
+                  <div class="stm-curriculum-item__meta">
+                                    <i class="far fa-clock"></i>14 Minutes                                    </div>
+  
+                                      <div class="stm-curriculum-item__excerpt">
+                          <p>The Tensor Core GPU Architecture designed to Bring AI to Every Industry. Equipped with 640 Tensor Cores, Volta delivers over <strong>100 teraflops</strong> per second (TFLOPS) of deep learning performance, over a 5X increase compared to prior generation NVIDIA Pascal architecture.</p>                    </div>
+                  
+              </div>
+  
+            
+        
+        
+              <div class="stm-curriculum-item ">
+  
+                  <div class="stm-curriculum-item__num">
+            3                </div>
+  
+                  <div class="stm-curriculum-item__icon" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Quiz">
+            <i class="stmlms-quiz"></i>
+                  </div>
+  
+                  <div class="stm-curriculum-item__title">
+                      <div class="heading_font">
+                          Final Middle Quiz                                            </div>
+                  </div>
+  
+                  <div class="stm-curriculum-item__preview">
+                            </div>
+  
+                  <div class="stm-curriculum-item__meta">
+                                    6 questions                                    </div>
+  
+                  
+              </div>
+  
+            
+                        <div class="stm-curriculum-section">
+                      <h3>Section 3: Ray Tracing overview</h3>
+                  </div>
+          
+        
+        
+              <div class="stm-curriculum-item has-excerpt">
+  
+                  <div class="stm-curriculum-item__num">
+            1                </div>
+  
+                  <div class="stm-curriculum-item__icon" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Text Lesson">
+            <i class="stmlms-text"></i>
+                  </div>
+  
+                  <div class="stm-curriculum-item__title">
+                      <div class="heading_font">
+                          Ray Tracing                                                    <span class="stm-curriculum-item__toggle"></span>
+                                              </div>
+                  </div>
+
+                  <div class="stm-curriculum-item__meta">
+                                    <i class="far fa-clock"></i>60 minutes                                    </div>
+  
+                                      <div class="stm-curriculum-item__excerpt">
+                          <p>Early computer graphics shading models proposed by Henri Gouraud and Bui Tuong Phong, among others, computed reflections based on the spatial relationship between light sources and a point on a surface. Somewhat later, Jim Blinn developed a reflection model derived from Ken Torrance’s work describing inter-reflections of the microscopic structures of surfaces.</p><p><strong>The rendering of a shiny teapot with doors and windows reflected from its surface&nbsp;</strong></p>                    </div>
+                  
+              </div>
+  
+            
+        
+        
+              <div class="stm-curriculum-item ">
+  
+                  <div class="stm-curriculum-item__num">
+            2                </div>
+  
+                  <div class="stm-curriculum-item__icon" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Text Lesson">
+            <i class="stmlms-text"></i>
+                  </div>
+  
+                  <div class="stm-curriculum-item__title">
+                      <div class="heading_font">
+                          Design and Visualization with Nvidia                                            </div>
+                  </div>
+  
+                  <div class="stm-curriculum-item__preview">
+                            </div>
+  
+                  <div class="stm-curriculum-item__meta">
+                            </div>
+  
+                  
+              </div>
+  
+            
+      </div>
+  
+          </div>
+            
+  
+  </role>       </div>
+      </div>
+      <div class="col-md-3">
+  
+              
+  
+        <div class="stm-lms-course__sidebar">
+        
+        
+            
+          
+            <div class="stm-lms-buy-buttons stm-lms-buy-buttons-mixed stm-lms-buy-buttons-mixed-pro">
+                
+                    
+                    <div class="stm_lms_mixed_button subscription_enabled">
+        
+        
+                        <div class="buy-button btn btn-default btn_big heading_font">
+        
+                            <span>
+                                Get course                    </span>
+        
+                                                    <div class="btn-prices btn-prices-price">
+        
+                                    
+                                                                    <label class="price" title="$50">₹ 799</label>
+                                    
+                                </div>
+                            
+                        </div>
+        
+                        <div class="stm_lms_mixed_button__list">
+        
+        
+                            
+                                
+                                    <a class="stm_lms_mixed_button__single" href="#" data-target=".stm-lms-modal-login" data-lms-modal="login">
+                                        <span>One Time Payment</span>
+                                    </a>
+        
+                                
+                                
+                                        <!--Check course available only in one plan as a category-->
+                                        
+                                            <a href="#" class="btn btn-default btn-subscription btn-outline btn-save-checkpoint" data-course-id="1002">
+                                                <span>Available in "Optimal" plan</span>
+                                            </a>
+        
+                                        
+                                            <a href="#" class="btn btn-default btn-subscription btn-outline btn-save-checkpoint" data-course-id="1002">
+                                                <span>Available in "Advanced" plan</span>
+                                            </a>
+        
+                                        
+                                            <a href="#" class="btn btn-default btn-subscription btn-outline btn-save-checkpoint" data-course-id="1002">
+                                                <span>Available in "Start" plan</span>
+                                            </a>
+        
+                                                                                                                
+        
+                            
+                        </div>
+        
+                    </div>
+                
+                
+                
+            </div>
+        
+        
+          
+          
+          <div class="stm-lms-course-info heading_font">
+                  <div class="stm-lms-course-info__single">
+                        <div class="stm-lms-course-info__single_label">
+                            <span>Duration</span>:
+                            <strong>8 Weeks</strong>
+                        </div>
+                        <div class="stm-lms-course-info__single_icon">
+                            <i class="fa-icon-stm_icon_clock"></i>
+                        </div>
+              </div>
+                  <div class="stm-lms-course-info__single">
+                        <div class="stm-lms-course-info__single_label">
+                            <span>Lectures</span>:
+                            <strong>12</strong>
+                        </div>
+                        <div class="stm-lms-course-info__single_icon">
+                            <i class="fa-icon-stm_icon_bullhorn"></i>
+                        </div>
+              </div>
+                  <div class="stm-lms-course-info__single">
+                        <div class="stm-lms-course-info__single_label">
+                            <span>Live Class Duration</span>:
+                            <strong>1 hour</strong>
+                        </div>
+                        <div class="stm-lms-course-info__single_icon">
+                            <i class="fa-icon-stm_icon_film-play"></i>
+                        </div>
+              </div>
+                  <div class="stm-lms-course-info__single">
+                        <div class="stm-lms-course-info__single_label">
+                            <span>Level</span>:
+                            <strong>Basic</strong>
+                        </div>
+                        <div class="stm-lms-course-info__single_icon">
+                            <i class="lnricons-chart-growth"></i>
+                        </div>
+              </div>
+              </div>
+        
+          
+          <div class="stm-lms-dynamic_sidebar">
+            <div id="stm_lms_popular_courses-3" class="widget widget_stm_lms_popular_courses">
+                    
+        
+        <script type="text/javascript">
+        /* <![CDATA[ */
+        (function() {
+          var dropdown = document.getElementById( "archives-dropdown-3" );
+          function onSelectChange() {
+            if ( dropdown.options[ dropdown.selectedIndex ].value !== '' ) {
+              document.location.href = this.options[ this.selectedIndex ].value;
+            }
+          }
+          dropdown.onchange = onSelectChange;
+        })();
+        /* ]]> */
+        </script>
+              </div><div class="multiseparator"></div><div id="working_hours-2" class="widget widget_working_hours"><h4 class="widgettitle">Working hours</h4>        
+                  <table class="table_working_hours">
+                                              <tbody><tr class="opened">
+                      <td class="day_label h6 normal_font">Monday</td>
+                      <td class="day_value h6 normal_font">9:30 am - 6.00 pm</td>
+                    </tr>
+                                                        <tr class="opened">
+                      <td class="day_label h6 normal_font">Tuesday</td>
+                      <td class="day_value h6 normal_font">9:30 am - 6.00 pm</td>
+                    </tr>
+                                                        <tr class="opened">
+                      <td class="day_label h6 normal_font">Wednesday</td>
+                      <td class="day_value h6 normal_font">9:30 am - 6.00 pm</td>
+                    </tr>
+                                                        <tr class="opened">
+                      <td class="day_label h6 normal_font">Thursday</td>
+                      <td class="day_value h6 normal_font">9:30 am - 6.00 pm</td>
+                    </tr>
+                                                        <tr class="opened">
+                      <td class="day_label h6 normal_font">Friday</td>
+                      <td class="day_value h6 normal_font">9:30 am - 5.00 pm</td>
+                    </tr>
+                                                        <tr class="closed">
+                      <td class="day_label h6 normal_font">Saturday</td>
+                      <td class="day_value closed h6 normal_font"><span>Closed</span></td>
+                    </tr>
+                                                        <tr class="closed">
+                      <td class="day_label h6 normal_font">Sunday</td>
+                      <td class="day_value closed h6 normal_font"><span>Closed</span></td>
+                    </tr>
+                                        </tbody></table>
+        
+            </div><div class="multiseparator"></div>	</div>
+        
+        </div>
+                </div>
+  
+          </div>
+  
+
+  
+      </div>
+  
+      </div>
+  
+                    </div>
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <section id="introblocks">
+      <h2 id="courses">Related Courses</h2>
+      <ul class="nospace group">
+        <li class="one_third">
+          <figure><a class="imgover" href="./pages/japanese.html"><img id="courseimg" src="https://images.unsplash.com/photo-1480796927426-f609979314bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80" alt=""></a>
+            <figcaption>
+              <h6 class="headingcourse">Japanese</h6>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="one_third">
+          <figure><a class="imgover" href="./pages/spanish.html"><img id="courseimg" src="https://images.pexels.com/photos/1388030/pexels-photo-1388030.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""></a>
+            <figcaption>
+              <h6 class="headingcourse">Spanish </h6>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="one_third">
+          <figure><a class="imgover" href="./pages/german.html"><img id="courseimg" src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z2VybWFueXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80" alt=""></a>
+            <figcaption>
+              <h6 class="headingcourse">German</h6>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="one_third">
+          <figure><a class="imgover" href="./pages/english.html"><img id="courseimg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQEuPdo4pcOWQ2rjDwYsUF3o4_ffLLUOLvpw&usqp=CAU" alt=""></a>
+            <figcaption>
+              <h6 class="headingcourse">English</h6>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="one_third">
+          <figure><a class="imgover" href="./pages/web.html"><img id="courseimg" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d2ViJTIwZGV2ZWxvcG1lbnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80" alt=""></a>
+            <figcaption>
+              <h6 class="headingcourse">Web Development</h6>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="one_third">
+          <figure><a class="imgover" href="./pages/excel.html"><img id="courseimg" src="https://www.hitechmv.com/wp-content/uploads/2019/08/exels.jpg" alt=""></a>
+            <figcaption>
+              <h6 class="headingcourse">MS Excel</h6>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row2">
+  <section class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <p class="nospace font-xs"></p>
+      <h2 class="headingcourse" id="whyus">Why us?</h2>
+    </div>
+    <ul class="nospace group center">
+      <li class="one_third first">
+        <article><a href="#"><i class="fas fa-eraser fa-5x btmspace-50"></i></a>
+          <h6 class="headingcourse">Doubt Sessions
+          </h6>
+          <p class="btmspace-30">Personalized Doubt Sessions with ChaseMaster Faculties for weekly tests and Exercise Sheets. [&hellip;]</p>
+          <footer><a class="btn" href="#">Read More</a></footer>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="#"><i class="fas fa-chess-bishop fa-5x btmspace-50"></i></a>
+          <h6 class="headingcourse">Classes</h6>
+          <p class="btmspace-30">Interactive Classes where you can clear out all of your doubts and problems with the help of chats [&hellip;]</p>
+          <footer><a class="btn" href="#">Read More</a></footer>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="#"><i class="fas fa-coins fa-5x btmspace-50"></i></a>
+          <h6 class="headingcourse">Affordability</h6>
+          <p class="btmspace-30">Offering great and affordable courses from expert educators starting at Rs799/month only. [&hellip;]</p>
+          <footer><a class="btn" href="#">Read More</a></footer>
+        </article>
+      </li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<footer id="footer" style="position: relative;">
+  <div class="footer_wrapper">
+            
+    <div id="footer_bottom">
+        <div class="footer_widgets_wrapper kek text-normal">
+            <div class="container" id="footercontainer">
+                <div class="widgets cols_4 clearfix">
+        <aside id="stm_text-2" class="widget stm_wp_widget_text"><div class="widget_title"><h3>About</h3></div>        <div class="textwidget"><p>Masterstudy is Education WordPress theme featured by Learning Management System (LMS) for online education.<br>
+Developed by <a href="https://www.linkedin.com/in/omkar-v-130451112/">OmkarVatsa</a>.</p>
+</div>
+
+
+
+    <div class="socials_widget_wrapper socials_widget_wrapper__text">
+                      <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+
+</aside><aside id="contacts-2" class="widget widget_contacts"><div class="widget_title"><h3>Contact</h3></div><ul class="widget_contacts_style_2"><li class="widget_contacts_address"><div class="icon"><i class="fa-icon-stm_icon_pin"></i></div><div class="text">USA, Callifornia 20, First Avenue, Callifornia</div></li><li class="widget_contacts_phone"><div class="icon"><i class="fa-icon-stm_icon_phone"></i></div><div class="text">Tel.: +1 212 458 300 32</div></li><li class="widget_contacts_fax"><div class="icon"><i class="fa-icon-stm_icon_fax"></i></div><div class="text">Fax: +1 212 375 24 14</div></li><li class="widget_contacts_email"><div class="icon"><i class="fa fa-envelope"></i></div><div class="text"><a href="mailto:ankushwork31@gmail.com">ankushwork31@gmail.com</a></div></li></ul></aside><aside id="stm_pages-2" class="widget widget_pages"><div class="widget_title"><h3>Pages</h3></div>			<ul class="style_2">
+    <li class="page_item page-item-392"><a href="#"><span class="h6">About Us</span></a></li>
+<li class="page_item page-item-664 current_page_parent"><a href="#"><span class="h6">Blog</span></a></li>
+<li class="page_item page-item-413"><a href="#"><span class="h6">Contact Us</span></a></li>
+<li class="page_item page-item-2"><a href="#"><span class="h6">Courses</span></a></li>
+<li class="page_item page-item-7"><a href="#"><span class="h6">Home</span></a></li>
+  </ul>
+  </aside>                 </div>
+            </div>
+        </div>
+    </div>
+
+    
+  </div>
+</footer>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="bgded overlay row4" style="background-image:url('https://wallpaperaccess.com/full/253322.jpg');">
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- JAVASCRIPTS -->
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>

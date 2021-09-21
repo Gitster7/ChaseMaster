@@ -1,0 +1,45 @@
+h1{
+    color: #FF00E4;
+}
+
+h5, h4{
+    color: #FF00E4;
+    font-weight: bolder;
+}
+
+.heading{
+    color: aliceblue;
+}
+
+#master, h2, h3, #whyus{
+    color: #6ECB63;
+}
+
+#introblocks{
+    padding-bottom: 10%;
+}
+
+.headingcourse{
+    color: #6ECB63;
+    font-size: 200%;
+    font-weight: bolder;
+    text-align: center;
+}
+
+#courseimg{
+    width: 500px;
+    height: 250px;
+}
+
+#footer{
+    padding-bottom: 0%;
+    padding-top: 0%;
+}
+
+#courses{
+    padding: 5%;
+}
+
+#footercontainer{
+    padding: 0;
+}
