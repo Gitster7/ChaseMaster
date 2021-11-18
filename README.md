@@ -4,10 +4,6 @@ Responsive ecommerce template built with React.js
 
 ---
 
-
-
----
-
 ## Author
 
 - **Omkar Vatsa** - _Initial work_ - [Omkar Vatsa](https://github.com/Gitster7)
