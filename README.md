@@ -2,6 +2,8 @@
 
 Responsive ecommerce template built with React.js
 
+https://gitster7.github.io/ChaseMaster/
+
 ---
 
 ## Author
